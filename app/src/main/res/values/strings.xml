@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Winlator</string>
+    <string name="app_name">Mypc</string>
     <string name="run">Run</string>
     <string name="edit">Edit</string>
     <string name="remove">Remove</string>
@@ -226,3 +226,19 @@
     <string name="startup_selection">Startup Selection</string>
     <string name="wine_debug_channel">Wine Debug Channel</string>
 </resources>
+<resources>
+<string name="app_name">PC</string>
+ <string name="settings">Settings</string>
+ <string name="language">Language</string>
+<string name="choose_language">Choose Language</string>
+ <string name="english">English</string>
+<string name="arabic">Arabic</string>
+ </resources>
+ <string-array name="language_names">
+<item>English</item>
+ <item>العربية</item>
+ </string-array>
+<string-array name="language_values">
+ <item>en</item>
+ <item>ar</item>
+ </string-array>

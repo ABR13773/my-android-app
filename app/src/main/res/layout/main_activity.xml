@@ -1,41 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/DrawerLayout"
-    android:fitsSystemWindows="true"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+            android:background="#2B2B2B">
 
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:id="@+id/Toolbar"
-            android:background="@color/colorPrimary"
-            app:layout_scrollFlags="enterAlways|scroll"
-            app:title="@string/app_name"
-            app:titleTextColor="#ffffff"
-            app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium" />
+                <!-- زر الإعدادات في الأعلى -->
+                    <ImageButton
+                            android:id="@+id/btnSettings"
+                                    android:layout_width="48dp"
+                                            android:layout_height="48dp"
+                                                    android:layout_alignParentTop="true"
+                                                            android:layout_alignParentEnd="true"
+                                                                    android:layout_margin="16dp"
+                                                                            android:background="@android:color/transparent"
+                                                                                    android:src="@android:drawable/ic_menu_manage"
+                                                                                            android:contentDescription="Settings" />
 
-        <FrameLayout
-            android:id="@+id/FLFragmentContainer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-    </LinearLayout>
-
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:id="@+id/NavigationView"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/main_menu_header"
-        app:itemIconTint="@color/colorAccent"
-        app:menu="@menu/main_menu"/>
-</androidx.drawerlayout.widget.DrawerLayout>
+                                                                                                <!-- شبكة لعرض الملفات (مثل سطح المكتب) -->
+                                                                                                    <GridView
+                                                                                                            android:id="@+id/fileGrid"
+                                                                                                                    android:layout_width="match_parent"
+                                                                                                                            android:layout_height="match_parent"
+                                                                                                                                    android:layout_below="@id/btnSettings"
+                                                                                                                                            android:numColumns="3"
+                                                                                                                                                    android:horizontalSpacing="16dp"
+                                                                                                                                                            android:verticalSpacing="16dp"
+                                                                                                                                                                    android:padding="16dp"
+                                                                                                                                                                            android:clipToPadding="false"
+                                                                                                                                                                                    android:stretchMode="columnWidth"
+                                                                                                                                                                                            android:gravity="center" />
+                                                                                                                                                                                            </RelativeLayout>
