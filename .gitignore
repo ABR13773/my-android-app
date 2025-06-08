@@ -1,9 +1,11 @@
-build/
+/build/
 .gradle/
 .cache/
 *.zip
+*.tar.gz
+*.exe
 *.apk
-.idea/
-*.iml
-.DS_Store
-local.properties
+*.so
+.gopath/
+pkg/
+mod/
